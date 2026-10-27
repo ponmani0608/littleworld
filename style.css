@@ -1,0 +1,402 @@
+/* ==================================
+   OUR LITTLE WORLD 🎀
+   Cute Pink Aesthetic Theme
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: #f4a7c5;
+    --dark-pink: #d95f91;
+    --light-pink: #fff0f6;
+    --soft-pink: #ffe4ef;
+    --white: #ffffff;
+    --text: #713c54;
+    --muted: #a66b85;
+    --border: #f3c1d6;
+    --shadow: 0 8px 25px rgba(210, 105, 150, 0.13);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    color: var(--text);
+    background: linear-gradient(135deg, #fff5f9, #ffe7f1, #fff0f7, #fce4f0);
+    background-attachment: fixed;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #c94f83;
+    line-height: 1.4;
+}
+
+h1 { font-size: clamp(28px, 5vw, 44px); }
+h2 { font-size: clamp(22px, 4vw, 30px); }
+h3 { font-size: 20px; }
+
+p {
+    margin: 10px 0;
+    overflow-wrap: anywhere;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover { transform: translateY(-2px); }
+button:active { transform: scale(0.98); }
+
+input, textarea, select {
+    font-family: inherit;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 25px 16px;
+}
+
+#homePage,
+#loginPage,
+#funnyPage,
+#dashboardPage,
+#sectionPage,
+#quizPage,
+#memoriesPage,
+#finalPage {
+    width: 100%;
+}
+
+@media (min-width: 850px) {
+    .card {
+        max-width: 850px;
+        margin: 0 auto;
+    }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid var(--border);
+    border-radius: 25px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    padding: 30px;
+}
+
+.hero-card {
+    max-width: 650px;
+    padding: 45px 25px;
+}
+
+#homePage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#homePage h1 { margin-bottom: 15px; }
+#homePage p { color: var(--muted); font-size: 16px; }
+
+#loginPage {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#loginPage h1, #loginPage h2 { margin-bottom: 15px; }
+#loginPage p { color: var(--muted); }
+
+#loginPage select,
+#loginPage input[type="text"],
+#loginPage input[type="number"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 13px 15px;
+    margin: 10px auto;
+    display: block;
+    border: 2px solid var(--border);
+    border-radius: 13px;
+    background: #fff8fb;
+    color: var(--text);
+    outline: none;
+}
+
+#loginPage select:focus,
+#loginPage input:focus {
+    border-color: var(--dark-pink);
+}
+
+button,
+.btn,
+.back-btn,
+.save-btn,
+.next-btn {
+    padding: 12px 22px;
+    margin: 8px 4px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #f5a5c5, #e879ac);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 5px 12px rgba(217, 95, 145, 0.18);
+}
+
+button:hover,
+.btn:hover,
+.back-btn:hover,
+.save-btn:hover,
+.next-btn:hover {
+    background: linear-gradient(135deg, #e879ac, #d95f91);
+    box-shadow: 0 7px 16px rgba(217, 95, 145, 0.25);
+}
+
+.section-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    min-height: 180px;
+    padding: 20px 18px;
+    border: 2px solid var(--border);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: var(--shadow);
+    transition: 0.25s ease;
+    overflow-wrap: anywhere;
+}
+
+.section-card:hover {
+    transform: translateY(-5px);
+    border-color: #e88bb4;
+    background: #fff8fb;
+}
+
+.section-card h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.section-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.section-card small {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    background: #fff0f6;
+    color: #d94e88;
+}
+
+#dashboardPage {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#dashboardPage h1 { margin-bottom: 10px; }
+#dashboardPage > p { color: var(--muted); }
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin: 30px auto;
+}
+
+#loveBox,
+.love-box {
+    margin: 25px auto;
+    padding: 25px 20px;
+    border: 2px dashed #e88bb4;
+    border-radius: 22px;
+    background: linear-gradient(135deg, #fff0f6, #ffe2ee);
+    color: #b74679;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+#loveBox h2,
+.love-box h2 {
+    color: #c94f83;
+    font-size: 22px;
+}
+
+#loveBox p,
+.love-box p {
+    color: #9d5575;
+}
+
+.hidden { display: none !important; }
+
+#sectionPage,
+#quizPage,
+#memoriesPage,
+#finalPage {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+#sectionPage h1,
+#quizPage h1,
+#memoriesPage h1,
+#finalPage h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#sectionPage > p,
+#quizPage > p,
+#memoriesPage > p,
+#finalPage p {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+.question-card {
+    width: 100%;
+    margin: 18px 0;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #f3c1d6;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(210, 105, 150, 0.08);
+    text-align: left;
+}
+
+.question-title {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    background: #fff0f6;
+    border: 2px solid #f3b3cf;
+    border-radius: 14px;
+    color: #c94f83;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.answer-label,
+.my-label {
+    display: block;
+    margin: 12px 0 7px;
+    color: #c94f83;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.answer-box,
+.my-answer {
+    display: block;
+    width: 100%;
+    min-height: 110px;
+    padding: 14px 16px;
+    background: #fffafd;
+    border: 2px solid #f3b3cf;
+    border-radius: 14px;
+    color: #713c54;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.answer-box:focus,
+.my-answer:focus {
+    border-color: #df78a5;
+    box-shadow: 0 0 8px rgba(223, 120, 165, 0.2);
+}
+
+.message {
+    margin-top: 12px;
+    color: var(--dark-pink);
+    font-weight: 600;
+}
+
+.big-heart {
+    font-size: clamp(3rem, 8vw, 5rem);
+    margin-bottom: 10px;
+}
+
+.floating-hearts {
+    position: fixed;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+    letter-spacing: 0.6rem;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.small-title {
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    color: #d95f91;
+}
+
+.subtitle {
+    color: var(--muted);
+    font-size: 1.02rem;
+}
+
+#homePage,
+#loginPage,
+#funnyPage,
+#dashboardPage,
+#sectionPage,
+#quizPage,
+#memoriesPage,
+#finalPage {
+    display: none;
+}
+
+#homePage.active,
+#loginPage.active,
+#funnyPage.active,
+#dashboardPage.active,
+#sectionPage.active,
+#quizPage.active,
+#memoriesPage.active,
+#finalPage.active {
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .page { padding: 15px 10px; }
+    .card { margin: 12px auto; padding: 22px 15px; border-radius: 20px; }
+    .dashboard-grid { grid-template-columns: 1fr; gap: 14px; }
+    .question-card { padding: 14px; }
+    .question-title { font-size: 15px; }
+    .answer-box, .my-answer { min-height: 100px; font-size: 14px; }
+    button { max-width: 100%; padding: 11px 17px; font-size: 13px; }
+    #loveBox, .love-box { padding: 20px 14px; }
+    #loveBox h2, .love-box h2 { font-size: 19px; }
+}
