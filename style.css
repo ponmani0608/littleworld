@@ -29,19 +29,39 @@ body {
     min-height: 100vh;
     font-family: "Poppins", "Segoe UI", sans-serif;
     color: var(--text);
-    background: linear-gradient(135deg, #fff5f9, #ffe7f1, #fff0f7, #fce4f0);
+    background: linear-gradient(
+        135deg,
+        #fff5f9,
+        #ffe7f1,
+        #fff0f7,
+        #fce4f0
+    );
     background-attachment: fixed;
     line-height: 1.6;
 }
 
-h1, h2, h3 {
+/* ==================================
+   GENERAL ELEMENTS
+================================== */
+
+h1,
+h2,
+h3 {
     color: #c94f83;
     line-height: 1.4;
 }
 
-h1 { font-size: clamp(28px, 5vw, 44px); }
-h2 { font-size: clamp(22px, 4vw, 30px); }
-h3 { font-size: 20px; }
+h1 {
+    font-size: clamp(28px, 5vw, 44px);
+}
+
+h2 {
+    font-size: clamp(22px, 4vw, 30px);
+}
+
+h3 {
+    font-size: 20px;
+}
 
 p {
     margin: 10px 0;
@@ -54,12 +74,23 @@ button {
     transition: 0.25s ease;
 }
 
-button:hover { transform: translateY(-2px); }
-button:active { transform: scale(0.98); }
+button:hover {
+    transform: translateY(-2px);
+}
 
-input, textarea, select {
+button:active {
+    transform: scale(0.98);
+}
+
+input,
+textarea,
+select {
     font-family: inherit;
 }
+
+/* ==================================
+   PAGE CONTAINERS
+================================== */
 
 .page {
     width: 100%;
@@ -78,26 +109,27 @@ input, textarea, select {
     width: 100%;
 }
 
-@media (min-width: 850px) {
-    .card {
-        max-width: 850px;
-        margin: 0 auto;
-    }
-}
+/* ==================================
+   MAIN CONTENT BOX
+================================== */
 
-.card {
+.container,
+.main-container,
+.content-box {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 30px;
     background: rgba(255, 255, 255, 0.88);
     border: 1px solid var(--border);
     border-radius: 25px;
     box-shadow: var(--shadow);
     text-align: center;
-    padding: 30px;
 }
 
-.hero-card {
-    max-width: 650px;
-    padding: 45px 25px;
-}
+/* ==================================
+   WELCOME PAGE
+================================== */
 
 #homePage {
     display: flex;
@@ -106,8 +138,25 @@ input, textarea, select {
     text-align: center;
 }
 
-#homePage h1 { margin-bottom: 15px; }
-#homePage p { color: var(--muted); font-size: 16px; }
+#homePage h1 {
+    margin-bottom: 15px;
+}
+
+#homePage p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+#homePage .container,
+#homePage .main-container,
+#homePage .content-box {
+    max-width: 650px;
+    padding: 45px 25px;
+}
+
+/* ==================================
+   LOGIN PAGE
+================================== */
 
 #loginPage {
     max-width: 750px;
@@ -115,8 +164,14 @@ input, textarea, select {
     text-align: center;
 }
 
-#loginPage h1, #loginPage h2 { margin-bottom: 15px; }
-#loginPage p { color: var(--muted); }
+#loginPage h1,
+#loginPage h2 {
+    margin-bottom: 15px;
+}
+
+#loginPage p {
+    color: var(--muted);
+}
 
 #loginPage select,
 #loginPage input[type="text"],
@@ -138,6 +193,10 @@ input, textarea, select {
     border-color: var(--dark-pink);
 }
 
+/* ==================================
+   BUTTONS
+================================== */
+
 button,
 .btn,
 .back-btn,
@@ -147,7 +206,11 @@ button,
     margin: 8px 4px;
     border: none;
     border-radius: 30px;
-    background: linear-gradient(135deg, #f5a5c5, #e879ac);
+    background: linear-gradient(
+        135deg,
+        #f5a5c5,
+        #e879ac
+    );
     color: white;
     font-size: 14px;
     font-weight: 600;
@@ -159,53 +222,17 @@ button:hover,
 .back-btn:hover,
 .save-btn:hover,
 .next-btn:hover {
-    background: linear-gradient(135deg, #e879ac, #d95f91);
+    background: linear-gradient(
+        135deg,
+        #e879ac,
+        #d95f91
+    );
     box-shadow: 0 7px 16px rgba(217, 95, 145, 0.25);
 }
 
-.section-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 8px;
-    min-height: 180px;
-    padding: 20px 18px;
-    border: 2px solid var(--border);
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.92);
-    box-shadow: var(--shadow);
-    transition: 0.25s ease;
-    overflow-wrap: anywhere;
-}
-
-.section-card:hover {
-    transform: translateY(-5px);
-    border-color: #e88bb4;
-    background: #fff8fb;
-}
-
-.section-card h2 {
-    font-size: 18px;
-    margin-bottom: 4px;
-}
-
-.section-card p {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-.section-card small {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 6px 10px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 700;
-    background: #fff0f6;
-    color: #d94e88;
-}
+/* ==================================
+   DASHBOARD
+================================== */
 
 #dashboardPage {
     max-width: 1050px;
@@ -213,15 +240,274 @@ button:hover,
     text-align: center;
 }
 
-#dashboardPage h1 { margin-bottom: 10px; }
-#dashboardPage > p { color: var(--muted); }
+#dashboardPage h1 {
+    margin-bottom: 10px;
+}
 
-.dashboard-grid {
+#dashboardPage > p {
+    color: var(--muted);
+}
+
+.dashboard,
+.dashboard-grid,
+.box-container {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 18px;
     margin: 30px auto;
 }
+
+.dashboard-box,
+.dashboard-card,
+.section-box {
+    padding: 25px 18px;
+    background: rgba(255, 255, 255, 0.92);
+    border: 2px solid var(--border);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: 0.25s ease;
+    overflow-wrap: anywhere;
+}
+
+.dashboard-box:hover,
+.dashboard-card:hover,
+.section-box:hover {
+    transform: translateY(-5px);
+    border-color: #e88bb4;
+    background: #fff8fb;
+}
+
+.dashboard-box h2,
+.dashboard-card h2,
+.section-box h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.dashboard-box p,
+.dashboard-card p,
+.section-box p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.dashboard-box button,
+.dashboard-card button,
+.section-box button {
+    margin-top: 12px;
+}
+
+/* ==================================
+   PROGRESS BAR
+================================== */
+
+.progress-container,
+.progress-wrapper {
+    width: 100%;
+    max-width: 550px;
+    height: 13px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #f9dce9;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        #f5a5c5,
+        #d95f91
+    );
+    transition: width 0.4s ease;
+}
+
+.progress-text,
+.progress-status {
+    color: var(--dark-pink);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ==================================
+   SECTION PAGE
+================================== */
+
+#sectionPage,
+#quizPage,
+#memoriesPage {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+#sectionPage h1,
+#quizPage h1,
+#memoriesPage h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#sectionPage > p,
+#quizPage > p,
+#memoriesPage > p {
+    text-align: center;
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+/* ==================================
+   QUESTION CARDS
+================================== */
+
+.question-card {
+    width: 100%;
+    margin: 18px 0;
+    padding: 22px;
+    border: 1.5px solid var(--border);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 5px 18px rgba(210, 105, 150, 0.09);
+    text-align: left;
+}
+
+.question-title {
+    margin-bottom: 14px;
+    color: #c94f83;
+    font-size: 17px;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+.answer-label,
+.my-label,
+.your-label {
+    display: block;
+    margin: 12px 0 7px;
+    color: #c65a89;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* ==================================
+   MESSAGE BOX 💌
+================================== */
+
+.answer-box,
+.my-answer,
+.your-answer {
+    display: block;
+    width: 100%;
+    min-height: 115px;
+    padding: 15px;
+    border: 2px solid #f3c1d6;
+    border-radius: 16px;
+    background: #fff7fb;
+    color: #713c54;
+    font-size: 15px;
+    line-height: 1.7;
+    resize: vertical;
+    outline: none;
+    overflow-wrap: anywhere;
+    transition: border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.answer-box:focus,
+.my-answer:focus,
+.your-answer:focus {
+    border-color: #e879ac;
+    box-shadow: 0 0 0 4px rgba(232, 121, 172, 0.12);
+    background: #ffffff;
+}
+
+.answer-box::placeholder,
+.my-answer::placeholder,
+.your-answer::placeholder {
+    color: #c99caf;
+}
+
+/* ==================================
+   SAVE BUTTONS
+================================== */
+
+#sectionPage button,
+#quizPage button,
+#memoriesPage button {
+    margin-top: 15px;
+}
+
+#sectionPage button,
+#quizPage button,
+#memoriesPage button {
+    max-width: 100%;
+}
+
+/* ==================================
+   QUIZ PAGE
+================================== */
+
+.quiz-question,
+.quiz-card {
+    margin: 18px 0;
+    padding: 20px;
+    background: #fffafd;
+    border: 1.5px solid var(--border);
+    border-radius: 18px;
+    text-align: left;
+}
+
+.quiz-question h3,
+.quiz-card h3 {
+    margin-bottom: 12px;
+}
+
+.quiz-question select,
+.quiz-card select {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    background: #fff7fb;
+    color: var(--text);
+    outline: none;
+}
+
+.quiz-question select:focus,
+.quiz-card select:focus {
+    border-color: var(--dark-pink);
+}
+
+/* ==================================
+   MEMORIES PAGE
+   TEXT ONLY — NO PHOTOS
+================================== */
+
+.memory-card,
+.memory-item {
+    margin: 18px 0;
+    padding: 22px;
+    border: 1.5px solid var(--border);
+    border-radius: 20px;
+    background: #fffafd;
+    text-align: left;
+}
+
+.memory-card h3,
+.memory-item h3 {
+    margin-bottom: 12px;
+}
+
+.memory-card p,
+.memory-item p {
+    color: var(--muted);
+}
+
+/* ==================================
+   LOVE BOX
+================================== */
 
 #loveBox,
 .love-box {
@@ -229,7 +515,11 @@ button:hover,
     padding: 25px 20px;
     border: 2px dashed #e88bb4;
     border-radius: 22px;
-    background: linear-gradient(135deg, #fff0f6, #ffe2ee);
+    background: linear-gradient(
+        135deg,
+        #fff0f6,
+        #ffe2ee
+    );
     color: #b74679;
     text-align: center;
     overflow-wrap: anywhere;
@@ -246,44 +536,169 @@ button:hover,
     color: #9d5575;
 }
 
-.hidden { display: none !important; }
+/* ==================================
+   FINAL PAGE
+================================== */
 
+#finalPage {
+    text-align: center;
+}
+
+#finalPage h1 {
+    margin-bottom: 20px;
+}
+
+#finalPage p {
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* ==================================
+   COMPLETION STATUS
+================================== */
+
+.completed,
+.status-complete {
+    color: #3d9b75;
+    font-weight: 700;
+}
+
+.pending,
+.status-pending {
+    color: #c47b99;
+    font-weight: 600;
+}
+
+/* ==================================
+   DECORATION
+================================== */
+
+hr {
+    height: 1px;
+    margin: 20px 0;
+    border: none;
+    background: #f4c9da;
+}
+
+::selection {
+    background: #f6c0d7;
+    color: #713c54;
+}
+
+/* ==================================
+   RESPONSIVE DESIGN 📱
+================================== */
+
+@media (max-width: 600px) {
+    .page {
+        padding: 15px 10px;
+    }
+
+    .container,
+    .main-container,
+    .content-box {
+        margin: 12px auto;
+        padding: 22px 15px;
+        border-radius: 20px;
+    }
+
+    .dashboard,
+    .dashboard-grid,
+    .box-container {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .dashboard-box,
+    .dashboard-card,
+    .section-box {
+        padding: 20px 15px;
+    }
+
+    .question-card {
+        padding: 17px 13px;
+    }
+
+    .question-title {
+        font-size: 16px;
+    }
+
+    .answer-box,
+    .my-answer,
+    .your-answer {
+        min-height: 120px;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    button,
+    .btn,
+    .back-btn,
+    .save-btn,
+    .next-btn {
+        max-width: 100%;
+        padding: 11px 17px;
+        font-size: 13px;
+    }
+
+    #loveBox,
+    .love-box {
+        padding: 20px 14px;
+    }
+
+    #loveBox h2,
+    .love-box h2 {
+        font-size: 19px;
+    }
+}
+
+/* ==================================
+   SMALL SCREEN
+================================== */
+
+@media (max-width: 360px) {
+    h1 {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+
+    .question-card {
+        padding: 14px 10px;
+    }
+
+    button {
+        padding: 10px 13px;
+    }
+}
+
+/* Show only the active page */
+#homePage,
+#loginPage,
+#funnyPage,
+#dashboardPage,
 #sectionPage,
 #quizPage,
 #memoriesPage,
 #finalPage {
-    max-width: 850px;
-    margin: 0 auto;
+    display: none;
 }
 
-#sectionPage h1,
-#quizPage h1,
-#memoriesPage h1,
-#finalPage h1 {
-    text-align: center;
-    margin-bottom: 10px;
+/* Show the page selected by JavaScript */
+#homePage.active,
+#loginPage.active,
+#funnyPage.active,
+#dashboardPage.active,
+#sectionPage.active,
+#quizPage.active,
+#memoriesPage.active,
+#finalPage.active {
+    display: block;
 }
 
-#sectionPage > p,
-#quizPage > p,
-#memoriesPage > p,
-#finalPage p {
-    text-align: center;
-    color: var(--muted);
-    margin-bottom: 22px;
-}
-
-.question-card {
-    width: 100%;
-    margin: 18px 0;
-    padding: 18px;
-    background: #ffffff;
-    border: 1px solid #f3c1d6;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(210, 105, 150, 0.08);
-    text-align: left;
-}
-
+/* QUESTION BOX */
 .question-title {
     display: block;
     width: 100%;
@@ -299,6 +714,7 @@ button:hover,
     overflow-wrap: anywhere;
 }
 
+/* ANSWER LABEL */
 .answer-label,
 .my-label {
     display: block;
@@ -308,6 +724,7 @@ button:hover,
     font-weight: 600;
 }
 
+/* ANSWER TEXT BOX */
 .answer-box,
 .my-answer {
     display: block;
@@ -326,77 +743,36 @@ button:hover,
     box-sizing: border-box;
 }
 
+/* WHEN CLICKING THE ANSWER BOX */
 .answer-box:focus,
 .my-answer:focus {
     border-color: #df78a5;
     box-shadow: 0 0 8px rgba(223, 120, 165, 0.2);
 }
 
-.message {
-    margin-top: 12px;
-    color: var(--dark-pink);
-    font-weight: 600;
+/* SPACE BETWEEN EACH QUESTION */
+.question-card {
+    margin: 18px 0;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #f3c1d6;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(210, 105, 150, 0.08);
 }
 
-.big-heart {
-    font-size: clamp(3rem, 8vw, 5rem);
-    margin-bottom: 10px;
-}
-
-.floating-hearts {
-    position: fixed;
-    top: 18px;
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0.8;
-    letter-spacing: 0.6rem;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.small-title {
-    letter-spacing: 0.18rem;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-    color: #d95f91;
-}
-
-.subtitle {
-    color: var(--muted);
-    font-size: 1.02rem;
-}
-
-#homePage,
-#loginPage,
-#funnyPage,
-#dashboardPage,
-#sectionPage,
-#quizPage,
-#memoriesPage,
-#finalPage {
-    display: none;
-}
-
-#homePage.active,
-#loginPage.active,
-#funnyPage.active,
-#dashboardPage.active,
-#sectionPage.active,
-#quizPage.active,
-#memoriesPage.active,
-#finalPage.active {
-    display: block;
-}
-
+/* MOBILE VIEW */
 @media (max-width: 600px) {
-    .page { padding: 15px 10px; }
-    .card { margin: 12px auto; padding: 22px 15px; border-radius: 20px; }
-    .dashboard-grid { grid-template-columns: 1fr; gap: 14px; }
-    .question-card { padding: 14px; }
-    .question-title { font-size: 15px; }
-    .answer-box, .my-answer { min-height: 100px; font-size: 14px; }
-    button { max-width: 100%; padding: 11px 17px; font-size: 13px; }
-    #loveBox, .love-box { padding: 20px 14px; }
-    #loveBox h2, .love-box h2 { font-size: 19px; }
+    .question-card {
+        padding: 14px;
+    }
+
+    .question-title {
+        font-size: 15px;
+    }
+
+    .answer-box,
+    .my-answer {
+        min-height: 100px;
+        font-size: 14px;
+    }
 }

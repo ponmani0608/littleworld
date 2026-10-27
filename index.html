@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,18 +9,27 @@
 </head>
 
 <body>
-    <div class="floating-hearts" aria-hidden="true">💗 💕 💖 💗 💕</div>
 
+    <div class="floating-hearts" aria-hidden="true">
+        💗 💕 💖 💗 💕
+    </div>
+
+    <!-- HOME PAGE -->
     <section id="homePage" class="page active">
         <div class="card hero-card">
             <div class="big-heart">💗</div>
             <p class="small-title">A LITTLE PLACE FOR US</p>
             <h1>Our Little World</h1>
-            <p class="subtitle">Just you, me, and our little memories. 🎀</p>
-            <button onclick="showPage('loginPage')">Enter Our World 💌</button>
+            <p class="subtitle">
+                Just you, me, and our little memories. 🎀
+            </p>
+            <button onclick="showPage('loginPage')">
+                Enter Our World 💌
+            </button>
         </div>
     </section>
 
+    <!-- LOGIN PAGE -->
     <section id="loginPage" class="page">
         <div class="card">
             <h1>Before You Enter 🔐</h1>
@@ -74,20 +84,28 @@
             </form>
 
             <p id="loginMessage" class="message"></p>
-            <button class="secondary" onclick="showPage('homePage')">Go Back</button>
+            <button class="secondary" onclick="showPage('homePage')">
+                Go Back
+            </button>
         </div>
     </section>
 
+    <!-- FUNNY PAGE -->
     <section id="funnyPage" class="page">
         <div class="card">
             <div class="big-heart">🥹💗</div>
             <h1>Correct-ah kandupidichitiya?</h1>
-            <p class="subtitle">Welcome to our little world, chellooo! 💌</p>
+            <p class="subtitle">
+                Welcome to our little world, chellooo! 💌
+            </p>
             <p>Ready to explore our memories?</p>
-            <button onclick="showPage('dashboardPage')">Let's Go! 🎀</button>
+            <button onclick="showPage('dashboardPage')">
+                Let's Go! 🎀
+            </button>
         </div>
     </section>
 
+    <!-- DASHBOARD -->
     <section id="dashboardPage" class="page">
         <div class="dashboard-header">
             <p class="small-title">OUR OWN LITTLE UNIVERSE</p>
@@ -141,19 +159,24 @@
 
         <div id="loveBox" class="love-box hidden">
             <div class="big-heart">💖</div>
-            <h2>
-                LOVE YOUUU MAMA IDK WHT TO TELL BUT ENA analum vitu matum poiradhaaaaaaaaa adii thittuuu ellameyyy paanuuu vitu poiradhaaaaaaaaa
+            <h2>LOVE YOUUU MAMA
+                IDK WHT TO TELL  BUT ENA analum vitu matum poiradhaaaaaaaaa adii thittuuu ellameyyy paanuuu vitu poiradhaaaaaaaaa</BUTton>
             </h2>
             <p>You completed our little world!</p>
-            <button onclick="finishWebsite()">Adhu podhum, veliya vandhudu 😂❤️</button>
+            <button onclick="finishWebsite()">
+                Adhu podhum, veliya vandhudu 😂❤️
+            </button>
         </div>
 
         <p id="progressText" class="progress-text">0 / 6 sections completed</p>
     </section>
 
+    <!-- GENERAL QUESTION SECTION -->
     <section id="sectionPage" class="page">
         <div class="card wide-card">
-            <button class="back-button" onclick="showPage('dashboardPage')">← Dashboard</button>
+            <button class="back-button" onclick="showPage('dashboardPage')">
+                ← Dashboard
+            </button>
 
             <p class="small-title">A QUESTION ABOUT US</p>
             <h1 id="sectionTitle">Our Questions 💗</h1>
@@ -161,55 +184,78 @@
 
             <div id="questionsContainer"></div>
 
-            <button id="saveSectionButton" onclick="saveSectionAnswers()">SAVE BOTH ANSWERS 💾</button>
+            <button id="saveSectionButton" onclick="saveSectionAnswers()">
+                SAVE BOTH ANSWERS 💾
+            </button>
 
             <p id="sectionMessage" class="message"></p>
         </div>
     </section>
 
+    <!-- QUIZ PAGE -->
     <section id="quizPage" class="page">
         <div class="card wide-card">
-            <button class="back-button" onclick="showPage('dashboardPage')">← Dashboard</button>
+            <button class="back-button" onclick="showPage('dashboardPage')">
+                ← Dashboard
+            </button>
 
             <p class="small-title">OUR LITTLE QUIZ</p>
             <h1>How Well Do We Know Each Other? 💗</h1>
-            <p class="subtitle">Answer every question, both of you!</p>
+            <p class="subtitle">
+                Answer every question, both of you!
+            </p>
 
             <div id="quizContainer"></div>
 
-            <button onclick="saveQuizAnswers()">SAVE QUIZ ANSWERS 💾</button>
+            <button onclick="saveQuizAnswers()">
+                SAVE QUIZ ANSWERS 💾
+            </button>
 
             <p id="quizMessage" class="message"></p>
         </div>
     </section>
 
+    <!-- MEMORIES PAGE -->
     <section id="memoriesPage" class="page">
         <div class="card wide-card">
-            <button class="back-button" onclick="showPage('dashboardPage')">← Dashboard</button>
+            <button class="back-button" onclick="showPage('dashboardPage')">
+                ← Dashboard
+            </button>
 
             <p class="small-title">OUR SPECIAL MOMENTS</p>
             <h1>Our Memories 📸💗</h1>
-            <p class="subtitle">Write about the little moments you never want to forget.</p>
+            <p class="subtitle">
+                Write about the little moments you never want to forget.
+            </p>
 
             <div id="memoriesContainer"></div>
 
-            <button onclick="saveMemories()">SAVE OUR MEMORIES 💾</button>
+            <button onclick="saveMemories()">
+                SAVE OUR MEMORIES 💾
+            </button>
 
             <p id="memoriesMessage" class="message"></p>
         </div>
     </section>
 
+    <!-- FINAL PAGE -->
     <section id="finalPage" class="page">
         <div class="card hero-card">
             <div class="big-heart">💗</div>
             <p class="small-title">END OF OUR LITTLE WORLD</p>
             <h1>But Never the End of Us!</h1>
-            <p class="subtitle">Thank you for being my favourite part of life. Here's to all the memories we made and all the ones waiting for us. 💕</p>
+            <p class="subtitle">
+                Thank you for being my favourite part of life.
+                Here's to all the memories we made and all the ones waiting for us. 💕
+            </p>
             <h2>LOVE YOU FOREVER! 💖</h2>
-            <button onclick="showPage('homePage')">Back to Our World 🏡</button>
+            <button onclick="showPage('homePage')">
+                Back to Our World 🏡
+            </button>
         </div>
     </section>
 
     <script src="script.js"></script>
 </body>
 </html>
+```
